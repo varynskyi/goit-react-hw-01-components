@@ -11,20 +11,12 @@ export const Item = styled.li`
   background: rgb(233, 241, 237);
 `;
 
-export const StatusOn = styled.span`
+export const Status = styled.span`
   display: block;
   width: 20px;
   height: 20px;
   border-radius: 50%;
-  background-color: rgb(50,205,50);
-`;
-
-export const StatusOf = styled.span`
-  display: block;
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-  background-color: red;
+  background-color: ${(props) => (props.isOnline ? "red" : "green")};
 `;
 
 export const Avatar = styled.img`
